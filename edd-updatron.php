@@ -136,6 +136,10 @@ function cwp_edd_updatron_register_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite' => array(
+			'with_front' => false,
+			'slug' => 'updates'
+		)
 	);
 
 	register_post_type( CWP_EDD_UpdateTron::POST_TYPE, $args );
