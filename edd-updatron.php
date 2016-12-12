@@ -7,7 +7,7 @@
  * Plugin URI:  https://calderaforms.com
  * Description:
  * Version: 0.1.0
- * Author:      Josh Pollock For Caldera Labs <CalderaSaurus@CalderaWP.com>
+ * Author:      Josh Pollock & David Cramer <Calderasaurus@CalderaWP.com>
  * Author URI:  https://calderaforms.com
  * Text Domain: edd-updatetron
  * License:     GPL-2.0+
@@ -31,10 +31,7 @@ class CWP_EDD_UpdateTron {
 
 	public static function go(){
 		if( is_admin() ){
-			if( class_exists( 'CMB2' ) && class_exists( 'WDS_CMB2_Attached_Posts_Field' ) ){
-				new CWP_EDD_UpdateTron_Admin();
-			}
-
+			new CWP_EDD_UpdateTron_Admin();
 		}
 
 	}
@@ -81,7 +78,10 @@ class CWP_EDD_UpdateTron_Admin{
 			'options' => array(
 				'show_thumbnails' => false,
 				'filter_boxes'    => true,
-				'query_args'      => array( 'posts_per_page' => 50 ),
+				'query_args'      => [
+					'posts_per_page' => 50,
+					'post_type' => 'download',
+				],
 			),
 		) );
 
