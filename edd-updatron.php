@@ -7,7 +7,7 @@
  * Plugin URI:  https://calderaforms.com
  * Description:
  * Version: 0.1.0
- * Author:      Josh Pollock & David Cramer <Calderasaurus@CalderaWP.com>
+ * Author:      Josh Pollock For Caldera Labs <CalderaSaurus@CalderaWP.com>
  * Author URI:  https://calderaforms.com
  * Text Domain: edd-updatetron
  * License:     GPL-2.0+
